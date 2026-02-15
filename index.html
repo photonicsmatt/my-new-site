@@ -80,22 +80,13 @@
     .nav-logo {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-family: var(--serif);
-      font-weight: 700;
-      letter-spacing: -0.2px;
-      font-size: 22px;
-      color: #0f1b2d;
       white-space: nowrap;
     }
 
-    .nav-logo::before {
-      content: "";
-      width: 28px;
-      height: 28px;
-      border-radius: 7px;
-      background: var(--spectrum);
-      flex-shrink: 0;
+    .nav-logo img {
+      height: 34px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -196,7 +187,9 @@
       flex-direction: column;
       justify-content: flex-end;
       transition: transform 0.3s;
-      background: linear-gradient(145deg, #0a1628, #0d2a50, #0a1a35);
+      background-image: url('assets/nasa_story.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-main:hover { transform: translateY(-2px); }
@@ -255,8 +248,16 @@
 
     .hero-card:hover { transform: translateY(-2px); }
 
-    .hero-card:nth-child(1) { background: linear-gradient(145deg, #0a1020, #162040); }
-    .hero-card:nth-child(2) { background: linear-gradient(145deg, #100a20, #201640); }
+    .hero-card:nth-child(1) {
+      background-image: url('assets/video_story.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-card:nth-child(2) {
+      background-image: url('assets/quantum_story.jpg');
+      background-size: cover;
+      background-position: center;
+    }
 
     .hero-card::before {
       content: '';
@@ -859,19 +860,15 @@
     .footer-brand {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 700;
       color: rgba(255,255,255,0.85);
     }
 
-    .footer-brand::before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      border-radius: 5px;
-      background: var(--spectrum);
+    .footer-brand img {
+      height: 28px;
+      width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
     }
 
     .footer-text-link {
@@ -1019,7 +1016,9 @@
   <nav>
     <div class="nav-spectrum"></div>
     <div class="nav-inner">
-      <a class="nav-logo" href="#" aria-label="Photonics Spectra home">Photonics Spectra</a>
+      <a class="nav-logo" href="#" aria-label="Photonics Spectra home">
+        <img src="assets/logo_photonics_spectra.png" alt="Photonics Spectra">
+      </a>
       <ul class="nav-links">
         <li><a class="nav-link" href="#">News &amp; Features</a></li>
         <li><a class="nav-link" href="#">Topics</a></li>
@@ -1297,7 +1296,9 @@
 
   <footer>
     <div class="footer-logos">
-      <a href="#" class="footer-brand">Photonics Spectra</a>
+      <a href="#" class="footer-brand">
+        <img src="assets/logo_photonics_spectra.png" alt="Photonics Spectra">
+      </a>
       <a href="#" class="footer-text-link">BioPhotonics</a>
       <a href="#" class="footer-text-link">Vision Spectra</a>
       <a href="#" class="footer-text-link">Photonics Marketplace</a>
